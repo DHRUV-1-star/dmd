@@ -113,7 +113,7 @@ bool ensurePathToNameExists(Loc loc, const(char)[] name)
         {
             import dmd.globals;
             auto eSink = global.errorSink;
-            eSink.error(loc, "cannot create directory %*.s", cast(int) pt.length, pt.ptr);
+            eSink.error(loc, "cannot create directory `%.*s`", cast(int) pt.length, pt.ptr);
             FileName.free(pt.ptr);
             return false;
         }

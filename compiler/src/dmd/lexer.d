@@ -3591,7 +3591,7 @@ class Lexer
      */
     static const(char)* combineComments(const(char)[] c1, const(char)[] c2, bool newParagraph) pure
     {
-        //debug printf("Lexer::combineComments('%*.s', '%*.s', '%i')\n", cast(int) c1.length, c1.ptr, cast(int) c2.length, c2.ptr, newParagraph);
+        //debug printf("Lexer::combineComments('%.*s', '%.*s', '%i')\n", cast(int) c1.length, c1.ptr, cast(int) c2.length, c2.ptr, newParagraph);
         const(int) newParagraphSize = newParagraph ? 1 : 0; // Size of the combining '\n'
         if (!c1)
             return c2.ptr;
